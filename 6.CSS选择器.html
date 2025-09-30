@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +10,76 @@
     h2 {
       color: aqua;
     }
+
     /* 类选择器 */
     .highlight {
       background-color: yellow;
     }
+
     /* id选择器 */
     #header {
       font-size: 35px;
     }
+
     /* 通用选择器 */
     * {
       font-family: 'KaiTi';
+      font-weight: bolder;
     }
+
+    /* 子元素选择器 */
+    .father>.son {
+      color: yellowgreen;
+    }
+
+    /* 后代选择器 */
+    .father p {
+      color: brown;
+      font-size: larger;
+    }
+
+    /* 相邻元素选择器 */
+    h3 + p {
+      background-color: red;
+    }
+
+    /* 伪类选择器 */
+    #element:hover {
+      background-color: blueviolet;
+    }
+
+    /* 
+    选中第一个子元素  :first-child
+                    :nth-child
+                    :active
+    */
+
+    /* 伪元素选择器 
+        ::after
+        ::before
+    */
   </style>
 </head>
+
 <body>
   <h1>不同的CSS选择器</h1>
   <h2>这是一个元素选择器案例</h2>
   <h3 class="highlight">这是一个类选择器案例</h3>
+
   <h3 id="header">这是一个id选择器案例</h3>
+
+  <div class="father">
+    <p class="son">这是一个子元素选择器案例</p>
+    <div>
+      <p class="grandson">这是一个后代选择器案例</p>
+    </div>
+  </div>
+
+  <p>这是一个普通的 p 标签</p>
+  <h3>这是一个相邻元素选择器示例</h3>
+  <p>这是另一个p标签</p>
+
+  <h3 id="element">这是一个伪类选择器示例</h3>
 </body>
+
 </html>
