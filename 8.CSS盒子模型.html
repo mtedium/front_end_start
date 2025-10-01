@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS盒子模型</title>
+    <style>
+        .demo {
+            background-color: aqua;
+            display: inline-block;
+            border: 5px solid yellowgreen; /*符合属性*/
+            padding: 50px;
+            margin: 40px;
+        }
+
+        .border-demo {
+            background-color: yellow;
+            width: 300px;
+            height: 200px;
+            /* 全是复合属性bs, bw, bc */
+            border-style: dashed dotted double solid;
+            border-width: 10px;
+            border-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">关注永雏塔菲谢谢喵~ o(=•ェ•=)o</div>
+    <div class="border-demo">这是一个边框示例</div>
+</body>
+</html>
