@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS事件</title>
+</head>
+<body>
+    <button onclick="onclick_evnet()">这是一个点击事件按钮</button>
+    <input type="text" onfocus="onfocus_event()" onblur="onblur_event()">
+    <script>
+        function onclick_evnet() {
+            console.log('点击事件触发了');
+        }
+
+        function onfocus_event() {
+            console.log('获得焦点');
+        }
+
+        function onblur_event() {
+            console.log('失去焦点');
+        }
+    </script>
+</body>
+</html>

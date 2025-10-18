@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS基本语法</title>
+</head>
+
+<body>
+    <script>
+        var x;
+        let y = 5;
+        const PI = 3.14;
+        console.log(x, y, PI);
+        let name = '小黑子';
+        console.log(name);
+        let empty_value = null;
+        console.log(empty_value);
+
+        let age = 9
+        if (age > 18) {
+            console.log('成年');
+        } else {
+            console.log('未成年');
+        }
+
+        // let time = 19;
+        // if (time < 12) {
+        //     alert('上午');
+        // } else if (time < 18) {
+        //     alert('下午');
+        // } else {
+        //     alert('晚上');
+        // }
+
+        console.log('for循环');
+        for (let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+
+        console.log('while循环');
+        var j = 0;
+        while (j < 5) {
+            console.log(j);
+            j++;
+        }
+
+        console.log('循环关键字');
+        for (var k = 0; k < 7; k++) {
+            if (k == 2) continue;
+            if (k == 4) break;
+            console.log(k);
+        }    
+    </script>
+</body>
+
+</html>

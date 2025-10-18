@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_DOM</title>
+</head>
+<body>
+    <div id="box1">这是一个ID选择器标签</div>
+    <div class="box2">这是一个类选择器标签</div>
+    <div>普通div标签</div>
+    <button>点击按钮</button>
+
+
+    <script>
+        var element_id = document.getElementById('box1');
+        console.log(element_id);
+
+        var element_class = document.getElementsByClassName('box2')[0];
+        console.log(element_class);
+        
+        var element_tag = document.getElementsByTagName('div')[2];
+        console.log(element_tag);
+
+        //修改标签内容，以html的形式，以文本的形式
+        element_id.innerHTML = '<a href="#">跳转链接</a>';  //会解析html的标题
+        element_class.innerText = '<a href="#">跳转链接</a>';  //不会解析，只作为纯文本
+
+        //修改标签的风格样式
+        element_tag.style.color = 'red';
+        element_tag.style.fontSize = '50px';
+
+        //DOM属性绑定事件
+        var button_element = document.getElementsByTagName('button')[0];
+        console.log(button_element);
+
+        //匿名函数，没有函数名，不会在别处被调用
+        // button_element.onclick = function () {
+        //     alert('DOM 属性 按钮触发')
+        // }
+
+        button_element.addEventListener('click', click_event)
+
+        function click_event() {
+            alert('通过addEventListener 触发按键');
+        }
+    </script>
+</body>
+</html>

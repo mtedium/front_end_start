@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS函数</title>
+</head>
+<body>
+    <script>
+        function Greet() {
+            console.log('hello, world');
+        }
+        Greet();
+        
+        function Greet_Return() {
+            return 'hello, world';
+        }
+        let str = Greet_Return();
+        console.log(str);
+        console.log(Greet_Return());
+        
+        //作用域，各种语言都大差不大
+        var gobal_var = '全局'
+        function Greet123() {
+            var local_var = '局部'
+            console.log('全局：' + gobal_var);
+            console.log('局部：' + local_var);
+        }
+            Greet123();
+            console.log('全局：' + gobal_var);
+            console.log('局部：' + local_var);
+    </script>
+</body>
+</html>
