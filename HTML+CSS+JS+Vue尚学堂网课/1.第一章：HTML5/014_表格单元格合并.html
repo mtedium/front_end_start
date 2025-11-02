@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>合并单元格7和8：colspan</p>
+    <p>合并单元格15和20： rowspan</p>
+    <p>合并单元格16，17，21和22</p>
+    <p>水平合并：保留左边，删除右边 </p>
+    <p>垂直合并：保留上边，删除下边 </p>
+    <p>这个是是指合并时td标签的保留原则</p>
+
+    <table border="1" width="600px" height="400px">
+        <tr>
+            <td>单元格1</td>
+            <td>单元格2</td>
+            <td>单元格3</td>
+            <td>单元格4</td>
+            <td>单元格5</td>
+        </tr>
+        <tr>            
+            <td>单元格6</td>
+            <td colspan="2">单元格7, 8</td>
+            <td>单元格9</td>
+            <td>单元格10</td>
+        </tr>
+        <tr>
+            <td>单元格11</td>
+            <td>单元格12</td>
+            <td>单元格13</td>
+            <td>单元格14</td>
+            <td rowspan="2">单元格15, 20</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2">单元格16, 17, 20, 21</td>
+            <td>单元格18</td>
+            <td>单元格19</td>
+        </tr>
+        <tr>
+            <td>单元格23</td>
+            <td>单元格24</td>
+            <td>单元格25</td>
+        </tr>
+    </table>
+</body>
+</html>
