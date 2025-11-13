@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .text{
+            color: red;
+            font-size: 30px;
+        }
+
+        #desc{
+            color: green;
+            font-size: 40px;
+        }
+
+        .t1{
+            color: red;
+        }
+        .t2{
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <h3>全局选择器：*</h3>
+    <h3>元素选择器：标签名称</h3>
+    <h3>类选择器：class属性名（.）</h3>
+    <h3>ID选择器：id属性名（#）</h3>
+    <h3>选择器优先级：内联样式1000 > ID选择器100 > 类选择器10 > 元素选择器1</h3>
+    <h3>id最好唯一且不能数字开头，id不唯一的时候选择器虽然读的出来但是这样就不符合规范</h3>
+    <h3>class=""里面可以写多个类，用空格隔开即可，eg：class="dog cat"</h3>
+    <h3>支持选中多个对象在一个选择器中，用空格隔开即可</h3>
+
+    <p style="color:blue;font-size:15px" class="text" id="desc">我是P标签内容</p>
+
+    <p class="t1 t2">我是测试文本</p>
+
+    
+</body>
+</html>
