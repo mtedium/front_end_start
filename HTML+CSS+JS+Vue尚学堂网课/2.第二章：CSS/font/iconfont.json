@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7023770",
+      "name": "床",
+      "font_class": "chuang",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "15559659",
+      "name": "知乎",
+      "font_class": "shejiaotubiao-10",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    }
+  ]
+}
