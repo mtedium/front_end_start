@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 比较运算符，8种
+        // < > <= >= == != === !===
+
+        var num1 = 10;
+        var num2 = "10";
+        var num3 = 20;
+        var num4 = "20";
+
+        // < > <= >= == != 只比较值本身，即便类型不同
+        console.log(num1 < num3); //true
+        console.log(num1 < num4); //true
+
+        // === !== 严格比较，值和类型同时比较
+
+        // === 类型是否相等 和 值是否相等
+        console.log(num1 === num1); // true
+        console.log(num1 === num2); // false
+
+        // !== 类型是否不相等 和 值是否不相等
+        console.log(num1 !== num1); // false
+        console.log(num1 !== num2); // true
+    </script>
+</body>
+
+</html>
