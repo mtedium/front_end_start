@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 字符串方法的部分和C++，Python啥的大差不差，快速过一遍，没必要看视频
+        // 实在遇上问题查官方文档就行
+        // 尚学堂的文档资料就不给了，自己去向他们官方要，也是免费的，好歹给人家打广告的机会嘛
+        // 常用字符串方法
+        // charAt方法 concat方法 substring方法 sub方法
+
+        // 字符串的charAt方法，定位索引对应的字符，索引从0开始
+        var str = 'mtedium';
+        document.write(str.charAt(0));
+        document.write('<br>');
+        document.write('mtedium'.charAt('mtedium'.length - 1));
+        // 异常情况输出空字符串
+        console.log(str.charAt(-1)); // 负数
+        console.log(str.charAt(10)); // 超出索引
+
+        // concat方法用于拼接多个个字符串，返回一个新字符串，不改变原字符串
+        console.log('91'.concat('666'));
+        console.log('91'.concat('666', '999'));
+        // 如果参数不是字符串，concat方法会将其先转为字符串，然后再连接
+        console.log(''.concat(1, 2));
+
+        // substring方法用于通过输入的索引从原字符串取出子字符串并返回，不改变原字符串。
+        // 第一个参数表示子字符串的开始位置（包括），第二个位置表示结束位置（返回结果不含该位置）
+        console.log('yuzisoft'.substring(0, 2));
+        console.log('yuzisoft'.substring(0, 'yuzisoft'.length));
+        // 如果省略第二个参数，则表示子字符串一直到原字符串的结束
+        console.log('yuzisoft'.substring(0));
+        console.log('yuzisoft'.substring(0,));
+        // 如果第一个参数大于第二个参数，会自动更换两个参数的位置
+        console.log('yuzisoft'.substring(2, 0));
+        // 如果参数是负数，会自动将负数转为0
+        console.log('yuzisoft'.substring(0, -2));
+        console.log('yuzisoft'.substring(2, -1));
+
+
+        // substr方法用于从原字符串取出子字符串并返回，不改变原字符串
+        // 第一个参数是子字符串的开始位置（从0开始计算），第二个参数是子字符串的 长度 
+        // substring区别在第二个参数，一个是结束位置，一个是长度
+        'itbaizhan'.substr(2, 7); // baizhan
+        // 如果省略第二个参数，则表示子字符串一直到原字符串的结束
+        'itbaizhan'.substr(2) // "baizhan"
+        // 如果第一个参数是负数，表示倒数计算的字符位置。
+        console.log('itbaizhan'.substr(-7)); // "baizhan"
+        console.log('itbaizhan'.substr(-1)); // "n"
+        // 如果第二个参数是负数，将被自动转为0，因此会返回空字符串
+        'itbaizhan'.substr(4, -1) // ""
+
+    </script>
+</body>
+
+</html>

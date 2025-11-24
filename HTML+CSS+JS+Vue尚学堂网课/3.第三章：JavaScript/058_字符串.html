@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str1 = "你好,'世界'";
+        var str2 = '你好啊,"是该"';
+
+        // 不能双引号中嵌套双引号，或者单引号中嵌套单引号
+        // var str3 = "你好"世界""
+
+        // 输出一个带有双引号的文本，用转义字符反斜杠\
+        var str4 = "我们都知道书籍是要\"阅读\"的";
+        document.write(str4);
+
+        var str5 = '我们都知道书籍是要\'阅读\'的';
+        document.write(str5);
+
+
+        // 字符串默认只能一行显示，如果要换行，需要转义
+        var str6 = "不能双引号中嵌套双引号，\
+        或者单引号 \
+        中嵌套单引号";
+        document.write(str6);
+
+        // length 属性，返回字符串的长度
+        var str7 = '123456789';
+        document.write(' ', str7.length); // 9
+    </script>
+</body>
+
+</html>

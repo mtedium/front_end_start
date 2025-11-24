@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // break用于跳出条件语句和循环语句
+        // continue用于跳过当前这一轮循环，下一轮循环继续
+
+        for (var i = 0; i < 5; i++) {
+            if (i === 3) {
+                break;
+            }
+            console.log(i);
+        }
+
+        for (var i = 0; i < 5; i++) {
+            if (i === 3) {
+                continue;
+            }
+            console.log(i);
+        }
+    </script>
+</body>
+
+</html>
