@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 对象
+        // 对象就是一组“键值对”（key-value）的集合，是一种无序的复合数据集合
+        var alice = {
+            name: 'alice',
+            age: 16,
+            sex: 'female',
+            family: {
+                father: {
+                    name: 'ff',
+                },
+                mother: {
+                    name: 'mm',
+                }
+
+            },
+        };
+        console.log(alice.age);
+        
+        // 链式引用
+        console.log(alice.family.father.name);
+        console.log(alice.family.mother.name);
+    </script>
+</body>
+</html>

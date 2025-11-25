@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Date对象
+        // `Date.now`方法返回当前时间距离时间零点（1970年1月1日 00:00:00 UTC）的毫秒数，相当于 Unix 时间戳乘以1000
+
+        // 时间戳
+        // 时间戳是指格林威治时间1970年01月01日00时00分00秒(北京时间1970年01月01日08时00分00秒)起至现在的总秒数。
+        // 格林威治和北京时间就是时区的不同
+        // Unix是20世纪70年代初出现的一个操作系统，Unix认为1970年1月1日0点是时间纪元。JavaScript也就遵循了这一约束
+
+        // 实例方法get类 
+        // getTime()：返回实例距离1970年1月1日00:00:00的毫秒数
+        // getDate()：返回实例对象对应每个月的几号（从1开始）
+        // getDay()：返回星期几，星期日为0，星期一为1，以此类推
+        // getYear()：返回距离1900的年数
+        // getFullYear()：返回四位的年份
+        // getMonth()：返回月份（0表示1月，11表示12月）
+        // getHours()：返回小时（0-23）
+        // getMilliseconds()：返回毫秒（0-999）
+        // getMinutes()：返回分钟（0-59）
+        // getSeconds()：返回秒（0-59）
+
+        document.write(Date.now());
+
+        var d = new Date('November 25, 2025'); // 创建date对象
+        d.getDate() // 25
+        d.getMonth() // 10（11月，0表示一月）
+        d.getYear() // 125（2025 - 1900）
+        d.getFullYear() // 2025
+    </script>
+</body>
+
+</html>

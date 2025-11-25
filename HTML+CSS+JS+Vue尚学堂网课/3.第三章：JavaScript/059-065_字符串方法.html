@@ -15,6 +15,7 @@
         // 常用字符串方法
         // charAt方法 concat方法 substring方法 sub方法
 
+
         // 字符串的charAt方法，定位索引对应的字符，索引从0开始
         var str = 'mtedium';
         document.write(str.charAt(0));
@@ -24,11 +25,13 @@
         console.log(str.charAt(-1)); // 负数
         console.log(str.charAt(10)); // 超出索引
 
+
         // concat方法用于拼接多个个字符串，返回一个新字符串，不改变原字符串
         console.log('91'.concat('666'));
         console.log('91'.concat('666', '999'));
         // 如果参数不是字符串，concat方法会将其先转为字符串，然后再连接
         console.log(''.concat(1, 2));
+
 
         // substring方法用于通过输入的索引从原字符串取出子字符串并返回，不改变原字符串。
         // 第一个参数表示子字符串的开始位置（包括），第二个位置表示结束位置（返回结果不含该位置）
@@ -54,8 +57,41 @@
         console.log('itbaizhan'.substr(-7)); // "baizhan"
         console.log('itbaizhan'.substr(-1)); // "n"
         // 如果第二个参数是负数，将被自动转为0，因此会返回空字符串
-        'itbaizhan'.substr(4, -1) // ""
+        'itbaizhan'.substr(4, -1); // ""
 
+
+        // indexOf方法用于确定一个字符串在另一个字符串中第一次出现的位置
+        // 返回结果是匹配开始的位置。如果返回-1，就表示不匹配
+        'hello world'.indexOf('o'); // 4
+        'itbaizhan'.indexOf('sxt'); // -1
+        // indexOf方法还可以接受第二个参数，表示从该位置开始向后匹配
+        console.log('hello world'.indexOf('o', 0)); // 4
+        'hello world'.indexOf('o', 6); // 7
+
+
+        // `trim`方法用于去除字符串两端的空格，返回一个新字符串，不改变原字符串
+        '  hello world  '.trim()// "hello world"
+        // 该方法去除的不仅是空格，还包括制表符（`\t`、`\v`）、换行符（`\n`）和回车符（`\r`）
+        '\r\nitbaizhan \t'.trim() // 'itbaizhan'
+        // ES6扩展方法，`trimEnd()`和`trimStart()`方法
+        "   itbaizhan   ".trimEnd(); //    itbaizhan
+        "   itbaizhan   ".trimStart(); // itbaizhan   
+
+
+        // `split`方法按照给定规则分割字符串，返回一个由分割出来的子字符串组成的数组
+        'it|sxt|baizhan'.split('|') // ["it", "sxt", "baizhan"]
+        // 如果分割规则为空字符串，则返回数组的成员是原字符串的每一个字符。
+        'a|b|c'.split('') // ["a", "|",  "b","|", "c"]
+        // 如果省略参数，则返回数组的唯一成员就是原字符串
+        'it|sxt|bz'.split() // [it|sxt|bz]
+        // `split`方法还可以接受第二个参数，限定返回数组的最大成员数。
+        'it|sxt|bz'.split('|', 0) // []
+        'it|sxt|bz'.split('|', 1) // ["it"]
+        'it|sxt|bz'.split('|', 2) // ["it", "sxt"]
+        'it|sxt|bz'.split('|', 3) // ["it", "sxt", "bz"]
+        'it|sxt|bz'.split('|', 4) // ["it", "sxt", "bz"]
+
+        
     </script>
 </body>
 
