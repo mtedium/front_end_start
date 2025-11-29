@@ -1,0 +1,90 @@
+/* 顶部广告 start */
+.header {
+    width: 100%;
+    height: 120px;
+    /* 超出的内容隐藏 */
+    overflow: hidden;
+}
+
+.header img {
+    height: 120px;
+    /* 图片居中 */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* 顶部广告 end */
+
+
+/* 黑色导航 start */
+.black-nav {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+    font-size: 12px;
+}
+
+.black-nav .wrap {
+    width: 1226px;
+    margin: 0 auto;
+}
+
+.black-nav .wrap .black-nav-left {
+    float: left;
+}
+
+.black-nav .wrap .black-nav-right {
+    float: right;
+}
+
+.black-nav .wrap li {
+    float: left;
+    position: relative;
+}
+
+.black-nav a {
+    color: #b0b0b0;
+}
+
+.black-nav .wrap li span {
+    color: #424242;
+    margin: 0 3.6px;
+}
+
+.download {
+    width: 124px;
+    height: 0;
+    background-color: #fff;
+    box-shadow: 0 1px 5px #aaa;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -62px;
+    overflow: hidden;
+}
+
+.download img {
+    width: 90px;
+    margin: 18px auto 0;
+}
+
+.download p {
+    color: #333;
+    font-size: 15px;
+    line-height: 35px;
+}
+
+.black-nav-left li:hover>.download {
+    height: 148px;
+}
+
+stri {
+    width: 0;
+    height: 0;
+    border-bottom: 0px solid #fff;
+    border-left: 8px solid #fff;
+    border-right: 8px solid #fff;
+    position: absolute;
+}
+/* 黑色导航 end */
