@@ -8,7 +8,13 @@ https://www.bilibili.com/video/BV1BT4y1W7Aw/
 
 ### HTML+CSS+JS+Vue尚学堂网课
 
+HTML+CSS+JS+Vue
+
 https://www.bilibili.com/video/BV1oz421q7BB/
+
+小米商城
+
+https://www.bilibili.com/video/BV1dSPWehEcA/
 
 ## 书
 
