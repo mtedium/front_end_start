@@ -282,6 +282,7 @@
 .banner-img {
     width: 100%;
     height: 460px;
+    /* border-right: 1px solid #333; */
 }
 
 .banner>.wrap {
@@ -360,12 +361,159 @@
     /* top: 0px;   */
 }
 
-.slide li:hover .slide-list{
+.slide li:hover .slide-list {
     display: block;
 }
 
-.slide-list li:hover span{
+.slide-list li:hover span {
     color: #ff6700;
 }
 
 /* banner end */
+
+/* 广告模块 start */
+.ad {
+    width: 100%;
+    height: 170px;
+    padding: 14px 0;
+    background-color: #fff;
+}
+
+.ad-aside {
+    width: 234px;
+    height: 170px;
+    background-color: #5f5750;
+    padding: 3px;
+    box-sizing: border-box;
+    font-size: 12px;
+    float: left;
+}
+
+.ad-aside li {
+    float: left;
+    /* 234 - 6 = 228 / 3 = 76  */
+    width: 76px;
+    /* 170 - 6 = 164 / 2 = 82 */
+    height: 82px;
+    padding-top: 18px;
+    box-sizing: border-box;
+    opacity: 0.7;
+}
+
+.ad-aside i {
+    font-size: 24px;
+    margin-bottom: 4px;
+    display: block;
+    color: #fff;
+}
+
+.ad-aside a {
+    color: #fff;
+}
+
+.ad-aside li:hover {
+    opacity: 1;
+}
+
+.ad-img {
+    /* 992 / 3 = 330 */
+    /* 316 * 3 = 948 */
+    /* 992 - 948 = 48 / 3 = 16 */
+    width: 316px;
+    margin-left: 14.6px;
+    float: left;
+}
+
+.ad-img img {
+    width: 100%;
+}
+
+/* 广告模块 end */
+
+/* 内容模块 start */
+.content {
+    width: 100%;
+    /* background-color: #e0e0e0; */
+    overflow: hidden;
+    padding: 4px 0 12px;
+}
+
+/* 内容模块 end */
+
+/* 手机模块 start */
+.title {
+    text-align: left;
+    color: #333;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 58px;
+}
+
+.phone-box {
+    width: 100%;
+    height: 614px;
+}
+
+.phone-box-left {
+    width: 234px;
+    height: 614px;
+    float: left;
+}
+
+.phone-box-right {
+    width: 992px;
+    height: 614px;
+    float: left;
+}
+
+.item {
+    /* 4元素 平分992 */
+    width: 234px;
+    height: 300px;
+    margin: 0 0 14px 14px;
+    background-color: #fff;
+    padding: 20px 0;
+    box-sizing: border-box;
+    float: left;
+    transition: all 0.2s linear;
+}
+
+.item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.item-img {
+    width: 160px;
+    margin-bottom: 18px;
+
+}
+
+.item-name {
+    width: 214px;
+    height: 21px;
+    color: #333;
+    line-height: 21px;
+    margin:  0 auto 2px;
+}
+
+.item-desc {
+    width: 214px;
+    height: 28px;
+    color: #b0b0b0;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 auto 10px;
+}
+
+.item-price {
+    color: #ff6700;
+}
+
+.big-img {
+    width: 100%;
+    height: 120px;
+    margin: 22px 0;
+}
+
+/* 手机模块 end */
