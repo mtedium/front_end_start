@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Hello1</div>
+    <div>Hello2</div>
+
+    <p class="text">Hello</p>
+
+    <form name="login"></form>
+
+    <div id="root">哈哈哈</div>
+
+    <div class="nav">nav1</div>
+    <div class="nav">nav2</div>
+
+    <script>
+        var div1 = document.getElementsByTagName("div")[0];
+        div1.innerHTML = "scw-10";
+        console.log(div1);
+
+        var text = document.getElementsByClassName("text")[0];
+        text.innerHTML = "tr-7";
+        console.log(text);
+
+        // 使用率极低
+        var name = document.getElementsByName("login");
+        console.log(name);
+
+        var text = document.getElementById("root");
+        root.innerHTML = "sg-553";
+        console.log(root);
+
+        var nav1 = document.querySelector(".nav");
+        console.log(nav1);
+
+        var nav2 = document.querySelectorAll(".nav");
+        console.log(nav2);
+    </script>
+</body>
+
+</html>

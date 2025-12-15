@@ -250,6 +250,7 @@
     left: 0;
     top: 100px;
     display: none;
+    z-index: 10;
 }
 
 .nav-bar li:hover>.nav-bar-list {

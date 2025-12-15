@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav">导航</div>
+    <div id="container"></div>
+
+    <script>
+        var text = document.createElement("p");
+        var content = document.createTextNode("别捞薯条");
+        var id = document.createAttribute("id");
+        id.value = "root";
+        console.log(id);
+        // appendChild 将子元素或内容放到子容器中
+        text.appendChild(content);
+        // text.setAttribute("id", "123");
+        text.setAttributeNode(id);
+        console.log(text);
+
+        var container = document.getElementById("container");
+        container.appendChild(text);
+    </script>
+</body>
+
+</html>
