@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        .root {
+            width: 300px;
+            height: 300px;
+            background-color: #999;
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        .box5 {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1">单击</button>
+    <button id="btn2">双击</button>
+    <button id="btn3">按下</button>
+    <button id="btn4">释放</button>
+
+    <div class="box1" id="btn5"></div>
+    <div class="box2" id="btn6"></div>
+    <div class="box3" id="btn7"></div>
+    <div class="root" id="root">
+        <div class="box4" id="btn8"></div>
+        <div class="box5" id="btn9"></div>
+    </div>
+
+
+    <script>
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+        var btn4 = document.getElementById("btn4");
+        var btn5 = document.getElementById("btn5");
+        var btn6 = document.getElementById("btn6");
+        var btn7 = document.getElementById("btn7");
+        var btn8 = document.getElementById("root");
+        var btn9 = document.getElementById("root");
+        var btn10 = document.getElementById("root");
+
+        btn1.onclick = function () {
+            console.log("单击");
+        };
+        btn2.ondblclick = function () {
+            console.log("双击");
+        };
+        btn3.onmousedown = function () {
+            console.log("按下");
+        };
+        btn4.onmouseup = function () {
+            console.log("释放");
+        };
+        btn5.onmousemove = function () {
+            console.log("移动");
+        };
+        btn6.onmouseenter = function () {
+            console.log("进入");
+        };
+        btn7.onmouseleave = function () {
+            console.log("离开");
+        };
+        btn8.onmouseover = function () {
+            console.log("进入自己或子元素");
+        };
+        btn9.onmouseout = function () {
+            console.log("离开自己或子元素");
+        };
+        btn10.onwheel = function () {
+            console.log("滚轮");
+        };
+    </script>
+</body>
+
+</html>

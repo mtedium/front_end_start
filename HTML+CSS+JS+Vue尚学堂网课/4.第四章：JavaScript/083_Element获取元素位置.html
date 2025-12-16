@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .root {
+            width: 500px;
+            height: 500px;
+            background-color: #999;
+            margin: 50px;
+            position: relative;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 5px solid red;
+            padding: 10px;
+            margin: 20px;
+            background: green;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 100px;
+        }
+
+        h3 {
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box" id="box" ></div>
+    <div class="box" style="border: none;"></div>
+    <div class="root">
+        <div class="box1" id="box1"></div>
+    </div>
+    <h3>标题1</h3>
+    <h3>标题2</h3>
+    <h3>标题3</h3>
+    <h3>标题4</h3>
+
+    <script>
+
+        var box = document.getElementById("box");
+        var box1 = document.getElementById("box1");
+
+        console.log(box.clientWidth);
+        console.log(box.clientHeight);
+        console.log("--------------");
+        console.log(box.scrollWidth);
+        console.log(box.scrollHeight);
+        console.log("--------------");
+        console.log(box1.offsetHeight);
+        console.log(box1.offsetWidth);
+        console.log("--------------");
+
+        // 获取视口高度 （屏幕高度）
+        console.log(document.documentElement.clientHeight);
+        // 获取页面高度（页面中的内容所占高度）
+        console.log(document.body.clientHeight);
+        // 获取滚动高度
+        console.log(document.documentElement.scrollTop);
+
+        console.log(box1.offsetLeft);
+        console.log(box1.offsetTop);
+
+    </script>
+
+</body>
+
+</html>

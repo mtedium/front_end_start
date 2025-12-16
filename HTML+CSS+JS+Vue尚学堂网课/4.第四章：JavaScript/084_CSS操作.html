@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="box" id="box"></div>
+
+    <script>
+        // 三种设置css方式
+        var box = document.getElementById("box");
+        box.setAttribute("style", "width: 200px;height: 200px;background-color: skyblue;");
+
+        box.style.height = "300px";
+        box.style.width = "300px";
+        box.style.backgroundColor = "red";
+
+        box.style.cssText = "width: 200px;height: 200px;background-color: skyblue;";
+
+    </script>
+
+</body>
+
+</html>

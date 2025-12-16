@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btn0-h" onclick="console.log('html内联事件');">html</button>
+    <button id="btn0-j">DOM0</button>
+    <button id="btn2">DOM2</button>
+
+    <script>
+        // html内联事件（内联css一样的，就是在html标签里面写js）一般不用
+        // 直接赋值事件/DOM0事件（html和js分离，html文件里可以不出现js语句）
+        // 特点（这两类都算在dom0事件模型中）：
+        // 通过元素属性直接绑定事件处理函数。
+        // 同一个事件只能绑定一个处理函数，后续绑定会覆盖之前的。
+
+        // DOM0事件
+        var btn0_j = document.getElementById("btn0-j");
+        btn0_j.onclick = function () {
+            console.log("DOM0事件");
+        };
+
+        // DOM2事件
+        // 可以绑定多个事件，后续绑定不会覆盖之前的。
+        var btn2 = document.getElementById("btn2");
+        btn2.addEventListener("click", function () {
+            console.log("DOM2事件");
+        });
+        btn2.addEventListener("click", function () {
+            console.log("DOM2事件213");
+        });
+    </script>
+</body>
+
+</html>
