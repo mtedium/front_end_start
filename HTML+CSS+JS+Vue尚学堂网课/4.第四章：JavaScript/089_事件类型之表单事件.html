@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="username">
+    <form action="" id="myform">
+        <input type="text" name="" id="pwd">
+        <button type="button" id="resetbtn">reset</button>
+        <button type="submit" id="submitbtn">submit</button>
+    </form>
+
+    <script>
+        var username = document.getElementById("username");
+        var pwd = document.getElementById("pwd");
+        var myform = document.getElementById("myform");
+        var resetbtn = document.getElementById("resetbtn");
+        var submitbtn = document.getElementById("submitbtn");
+        
+        username.oninput = function (e) {
+            console.log(e.type);
+            // console.log(e.target.value);   
+        }
+        username.onselect = function (e) {
+            console.log(e.type);
+        }
+        // From表单中有单行input时，在input里按回车键后表单自动提交!!!
+        // username.onkeydown = function (e) {
+        //     if (e.keyCode == 13) return false;
+        // }
+        username.onchange = function (e) {
+            console.log(e.type);
+            // console.log(e.target.value);   
+        }
+
+        // 未指定 type 属性的按钮在大多数现代浏览器中
+        // 会被默认设置为 type="submit"，点击按钮会提交表单
+        resetbtn.onclick = function (e) {
+            myform.reset();
+            // pwd.reset(); 不行,input标签没有reset方法
+            // button的type设置为reset一样能达成效果
+            console.log("已重置");  
+        }
+        // submitbtn.onclick = function (e) {
+        //     myform.submit();
+        //     console.log(e.type);
+        // }
+        // 上面那个不行,因为这里的submit()方法是js产生的一个事件
+        // js产生的一个事件,不会触发onsubmit事件,监听不到
+        // 用isTrusted方法
+        // 可以检测什么是js里生成的事件,什么是用户直接交互产生的事件
+        myform.onsubmit = function (e) {
+            e.preventDefault(); // 阻止因表单提交刷新页面
+            console.log(e.type);
+            console.log("已提交");
+        }
+    </script>
+</body>
+
+</html>

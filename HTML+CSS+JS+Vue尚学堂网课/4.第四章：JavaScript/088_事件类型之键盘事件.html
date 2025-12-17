@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="username">
+    <input type="text" name="" id="pwd">
+
+    <script>
+        var username = document.getElementById("username");
+        var pwd = document.getElementById("pwd");
+
+        username.onkeydown = function () {
+            console.log("press");
+        }
+        // 数字,字符,字母才有值 ctrl shift啥的没有值
+        username.onkeyup = function (e) {
+            console.log(e.target.value); // value就是输入框里的输入的数据
+        }
+        pwd.onkeyup = function (e) {
+            // keyCode表示每个按键对应的唯一标识符
+            // 类似于ASCLL码,每个字符对应一个码
+            console.log(e.keyCode);
+            if (e.keyCode == 13) {
+                console.log("enter");
+            }
+        }
+    </script>
+</body>
+
+</html>
