@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 {
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>headline</h3>
+    <h3>headline</h3>
+    <h3>headline</h3>
+    <h3>headline</h3>
+    <h3>headline</h3>
+
+    <script>
+        // roll（不加括号）：表示函数本身，是一个函数引用（function reference）。
+        // roll()（加括号）：表示立即执行这个函数，得到的是函数的返回值。
+        // window.onscroll = roll;
+        window.onscroll = debounce(roll, 200);;
+        function roll() {
+            // console.log("row~row~roll~a~boat!");
+            var scrollTop = document.documentElement.scrollTop;
+            console.log(scrollTop);
+        }
+
+        function debounce(fn, delay) {
+            var timer = null;
+            // 闭包
+            return function () {
+                if (timer) clearTimeout(timer);
+                timer = setTimeout(fn, delay)
+            }
+        }
+    </script>
+</body>
+
+</html>

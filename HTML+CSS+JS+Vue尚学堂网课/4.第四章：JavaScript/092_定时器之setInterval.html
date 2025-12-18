@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #root {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script>
+        var root = document.getElementById("root");
+        // opaciy透明度
+        var opacity = 1;
+        var fade = setInterval(function () {
+            if (opacity > 0) {
+                opacity -= 0.05;
+            } else {
+                opacity = 1;
+            }
+            root.style.opacity = opacity;
+            // console.log(root.style.opacity);
+        }, 100);
+    </script>
+</body>
+
+</html>
