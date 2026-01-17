@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+            var 函数级作用域
+            let: 1.块级作用域 {}
+                 2.不存在变量提升
+                 3.不能重复声明(同作用域下)
+        */
+
+        // var n1 = 1;
+        // let n2 = 2;
+        // (function () {
+        //     var n4 = 4;
+        // })();
+
+        // if (true) {
+        //     let n3 = 3;
+        //     console.log(n1);
+        //     console.log(n2);
+        //     console.log(n3);
+        //     // console.log(n4);
+        // }
+
+        // (function () {
+        //     console.log("er" + n1);
+        //     console.log(n2);
+        //     console.log(n3);
+        //     console.log(n4);
+        // })();
+
+        // console.log(n3);
+
+        var a = [];
+        for(var i = 0; i < 10; i++) {
+            a[i] = function () {
+                console.log(i);                    
+            };
+        }
+        console.log(a);
+        a[6]();
+        
+        var b = [];
+        for(let i = 0; i < 10; i++) {
+            b[i] = function () {
+                console.log(i);                    
+            };
+        }
+        console.log(a);
+        b[6]();
+
+        console.log(x); //undefined 变量提升
+        var x = 12;
+
+        console.log(y); //Uncaught ReferenceError: Cannot access 'y' before initialization
+        let y = 12; // 无变量提升
+
+        // Uncaught SyntaxError: Identifier 'z' has already been declared
+        let z = 0;
+        let z = 1;
+        
+
+    </script>
+
+
+</body>
+
+</html>
