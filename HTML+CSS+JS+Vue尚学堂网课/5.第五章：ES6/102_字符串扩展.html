@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = '\u{1F917}\u{1F927}'
+        console.log(str);
+        
+        const href = "http://www.mtedium.cn";
+        const name = "mtedium's blog";
+        var root = document.getElementsByTagName("body");
+        console.log(root);
+
+        root[0].innerHTML = "<div><a href='" + href + "'>"+ name +"</a></div>";
+        root[0].innerHTML += `<a href='${href}'>${name}123</a>`;
+
+        for (let str of name) {
+            console.log(str);
+        }
+
+    </script>
+</body>
+</html>
