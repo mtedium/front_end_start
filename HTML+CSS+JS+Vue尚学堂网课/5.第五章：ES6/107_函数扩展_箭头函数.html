@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 函数的几种定义方法
+        function fn1(x, y) {
+            return x + y;
+        }
+
+        var fn2 = function (x, y) {
+            return x + y;
+        };
+
+        var fn3 = (x, y) => {x + y};
+
+        var fn4 = (x, y) => {
+            console.log('123');  vb
+            return x + y
+        };
+
+        // (某函数定义)();
+        // IIFE 立即调用函数式
+        // 字面意思定义完直接调用自己
+
+        var f = [
+            function (x, y) {
+                return x + y;
+            },
+            (x, y) => x + y,
+        ];
+
+        for (let i = 0; i < 2; i++) {
+            let x, y = 1;
+            sum = f[i](1, 2)
+            console.log(`f${i + 1} = ${sum}`);
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
