@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var name = "iwen";
+        var user = {
+            // 属性名和属性值是同样的变量名称，就可以省略
+            name,
+            age:20,
+            // getName:function(){
+            //     console.log(this.name);
+            // },
+            getName(){
+                console.log(this.name);
+            }
+        }
+
+        console.log(user);
+        user.getName();
+
+
+        function getPoint(){
+            var x = 10.23;
+            var y = 23.34;
+            return { x,y }
+        }
+
+        console.log(getPoint().x,getPoint().y);
+
+
+        var ib = "itbaizhan"
+        var user = {
+            [ib]:"web,java,python",
+            age:13
+        }
+
+        console.log(user);
+
+        var z = {a:10,b:20}
+        var n = { ...z }
+        console.log(n); // a:10,b:20
+
+
+        var obj ={}
+        console.log(obj.demo); // undefined
+
+    </script>
+    
+</body>
+</html>

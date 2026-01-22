@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(...[1, 2, 4]);
+        console.log(1, ...[2, 3, 4], 5);
+
+        console.log(...['a', 'b', 'c']);
+
+
+        const arr1 = ['a', 'b'];
+        const arr2 = ['c'];
+        const arr3 = ['d', 'e'];
+        // ES5 的合并数组
+        console.log(arr1.concat(arr2, arr3));
+        // [ 'a', 'b', 'c', 'd', 'e' ]
+        // ES6 的合并数组
+        console.log([...arr1, ...arr2, ...arr3]);
+        // [ 'a', 'b', 'c', 'd', 'e' ]
+
+
+    </script>
+</body>
+
+</html>
