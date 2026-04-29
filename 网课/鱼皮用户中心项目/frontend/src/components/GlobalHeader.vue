@@ -19,6 +19,10 @@
 
       <a-col flex="80px">
         <div class="user-login-status">
+          <div v-if="loginUserStore.loginUser.id">
+
+          </div>
+          {{ JSON.stringify(loginUserStore.loginUser) }}
           <a-button type="primary" href="/user/login"> 登录 </a-button>
         </div>
       </a-col>
@@ -30,6 +34,10 @@
 import { h, ref } from 'vue'
 import { HomeOutlined, CrownOutlined } from '@ant-design/icons-vue'
 import { useRouter } from 'vue-router'
+import { useLoginUserStore } from '@/store/userLoginUserStore'
+import { log } from 'console'
+
+const loginUserStore = useLoginUserStore()
 
 const router = useRouter()
 // 点击菜单后路由跳转事件

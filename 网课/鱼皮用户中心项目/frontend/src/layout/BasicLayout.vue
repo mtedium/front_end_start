@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import GlobalHeader from '@/components/GlobalHeader.vue';
-
-</script>
-
 <template>
   <div id="BasicLayout">
     <a-space direction="vertical" :style="{ width: '100%' }" :size="[0, 48]">
@@ -22,6 +17,16 @@ import GlobalHeader from '@/components/GlobalHeader.vue';
     </a-space>
   </div>
 </template>
+
+<script setup lang="ts">
+import GlobalHeader from '@/components/GlobalHeader.vue';
+import { getCurrentUser } from '@/api/user';
+
+getCurrentUser().then((res) => {
+  console.log('current user', res);
+});
+
+</script>
 
 <style scoped>
 #BasicLayout .header {
