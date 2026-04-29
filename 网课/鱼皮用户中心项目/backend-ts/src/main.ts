@@ -22,8 +22,8 @@ app.use(session({
 app.use('/api/user', userRouter);
 app.use(globalExceptionHandler);
 
-async function start() {
-  await initDatabase();
+function start() {
+  initDatabase();
   app.listen(8080, () => {
     console.log('Server running on http://localhost:8080');
   });

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm config *)",
+      "Bash(set PYTHON=C:\\\\Users\\\\Mtedium\\\\AppData\\\\Roaming\\\\uv\\\\python\\\\cpython-3.11-windows-x86_64-none\\\\python.exe)",
+      "Bash(cmd /c \"set PYTHON=C:\\\\Users\\\\Mtedium\\\\AppData\\\\Roaming\\\\uv\\\\python\\\\cpython-3.11-windows-x86_64-none\\\\python.exe && cd /d C:\\\\Codes\\\\Front_end\\\\前端完整学习\\\\网课\\\\鱼皮用户中心项目\\\\backend-ts && npm install better-sqlite3\")",
+      "Bash(PYTHON=\"C:\\\\Users\\\\Mtedium\\\\AppData\\\\Roaming\\\\uv\\\\python\\\\cpython-3.11-windows-x86_64-none\\\\python.exe\" npm install better-sqlite3 --python=\"C:\\\\Users\\\\Mtedium\\\\AppData\\\\Roaming\\\\uv\\\\python\\\\cpython-3.11-windows-x86_64-none\\\\python.exe\")",
+      "Bash(node -e \"import\\('node:sqlite'\\).then\\(m => console.log\\('ok:', Object.keys\\(m\\)\\)\\)\")",
+      "Bash(npm uninstall *)",
+      "Bash(npx tsc *)",
+      "Bash(node -e ' *)",
+      "Bash(npm run *)",
+      "Bash(node dist/main.js)",
+      "Bash(curl -s http://localhost:8080/api/user/current)",
+      "Bash(kill %1)"
+    ]
+  }
+}

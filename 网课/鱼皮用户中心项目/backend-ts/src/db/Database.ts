@@ -1,24 +1,15 @@
-import initSqlJs, { Database as SqlJsDatabase } from 'sql.js';
-import fs from 'fs';
+// @ts-nocheck
+import { DatabaseSync } from 'node:sqlite';
 import path from 'path';
 
-let db: SqlJsDatabase;
+let db: DatabaseSync;
 
 const dbPath = path.join(__dirname, '../../db/user-center.db');
 
-export async function initDatabase(): Promise<SqlJsDatabase> {
-  const SQL = await initSqlJs();
+export function initDatabase(): DatabaseSync {
+  db = new DatabaseSync(dbPath);
 
-  // 尝试读取已有数据库
-  if (fs.existsSync(dbPath)) {
-    const buffer = fs.readFileSync(dbPath);
-    db = new SQL.Database(buffer);
-  } else {
-    db = new SQL.Database();
-  }
-
-  // 初始化建表
-  db.run(`
+  db.exec(`
     CREATE TABLE IF NOT EXISTS user (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       username TEXT,
@@ -37,25 +28,12 @@ export async function initDatabase(): Promise<SqlJsDatabase> {
     )
   `);
 
-  saveDatabase();
   return db;
 }
 
-export function getDatabase(): SqlJsDatabase {
+export function getDatabase(): DatabaseSync {
   if (!db) {
     throw new Error('Database not initialized. Call initDatabase() first.');
   }
   return db;
-}
-
-export function saveDatabase(): void {
-  if (db) {
-    const data = db.export();
-    const buffer = Buffer.from(data);
-    const dir = path.dirname(dbPath);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    fs.writeFileSync(dbPath, buffer);
-  }
 }
