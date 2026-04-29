@@ -20,10 +20,11 @@
       <a-col flex="80px">
         <div class="user-login-status">
           <div v-if="loginUserStore.loginUser.id">
-
+            {{ loginUserStore.loginUser.username ?? '未知用户' }}
           </div>
-          {{ JSON.stringify(loginUserStore.loginUser) }}
-          <a-button type="primary" href="/user/login"> 登录 </a-button>
+          <div v-else>
+            <a-button type="primary" href="/user/login"> 登录 </a-button>
+          </div>
         </div>
       </a-col>
     </a-row>
@@ -35,7 +36,6 @@ import { h, ref } from 'vue'
 import { HomeOutlined, CrownOutlined } from '@ant-design/icons-vue'
 import { useRouter } from 'vue-router'
 import { useLoginUserStore } from '@/store/userLoginUserStore'
-import { log } from 'console'
 
 const loginUserStore = useLoginUserStore()
 
