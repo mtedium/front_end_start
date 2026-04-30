@@ -35,7 +35,7 @@
         </template>
 
         <template v-else-if="column.key === 'action'">
-          <a-button danger>删除</a-button>
+          <a-button danger @click="onDelete(record.id)">删除</a-button>
         </template>
       </template>
     </a-table>
@@ -44,7 +44,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { searchUsers } from '@/api/user'
+import { deleteUser, searchUsers } from '@/api/user'
 import { message } from 'ant-design-vue'
 import dayjs from 'dayjs'
 
@@ -52,6 +52,20 @@ const searchValue = ref('')
 
 const onSearch = () => {
   fetchData(searchValue.value)
+}
+
+const onDelete = async (id: number) => {
+  if(!id) {
+    message.error('用户id不能为空！')
+    return
+  }
+  const res = await deleteUser(id)
+  if (res.data.code === 0) {
+    message.success('删除用户成功！')
+    fetchData()
+  } else {
+    message.error('删除用户失败！')
+  }
 }
 
 const columns = [

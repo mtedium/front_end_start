@@ -35,7 +35,7 @@
 import { h, ref } from 'vue'
 import { HomeOutlined, CrownOutlined } from '@ant-design/icons-vue'
 import { useRouter } from 'vue-router'
-import { useLoginUserStore } from '@/store/userLoginUserStore'
+import { useLoginUserStore } from '@/store/useLoginUserStore'
 
 const loginUserStore = useLoginUserStore()
 

@@ -48,7 +48,7 @@
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import { userLogin } from '@/api/user'
-import { useLoginUserStore } from '@/store/userLoginUserStore'
+import { useLoginUserStore } from '@/store/useLoginUserStore'
 import { message } from 'ant-design-vue'
 
 interface FormState {

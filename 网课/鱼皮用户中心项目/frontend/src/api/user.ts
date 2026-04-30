@@ -1,4 +1,4 @@
-import myAxios from "@/request";
+import myAxios from '@/request'
 
 /**
  * 用户注册
@@ -6,11 +6,11 @@ import myAxios from "@/request";
  */
 export const userRegister = async (params: any) => {
   return myAxios.request({
-    url: "/api/user/register",
-    method: "POST",
+    url: '/api/user/register',
+    method: 'POST',
     data: params,
-  });
-};
+  })
+}
 
 /**
  * 用户登录
@@ -18,11 +18,11 @@ export const userRegister = async (params: any) => {
  */
 export const userLogin = async (params: any) => {
   return myAxios.request({
-    url: "/api/user/login",
-    method: "POST",
+    url: '/api/user/login',
+    method: 'POST',
     data: params,
-  });
-};
+  })
+}
 
 /**
  * 用户注销
@@ -30,21 +30,21 @@ export const userLogin = async (params: any) => {
  */
 export const userLogout = async (params: any) => {
   return myAxios.request({
-    url: "/api/user/logout",
-    method: "POST",
+    url: '/api/user/logout',
+    method: 'POST',
     data: params,
-  });
-};
+  })
+}
 
 /**
  * 获取当前用户
  */
 export const getCurrentUser = async () => {
   return myAxios.request({
-    url: "/api/user/current",
-    method: "GET",
-  });
-};
+    url: '/api/user/current',
+    method: 'GET',
+  })
+}
 
 /**
  * 获取用户列表
@@ -52,13 +52,13 @@ export const getCurrentUser = async () => {
  */
 export const searchUsers = async (username: any) => {
   return myAxios.request({
-    url: "/api/user/search",
-    method: "GET",
+    url: '/api/user/search',
+    method: 'GET',
     params: {
       username,
     },
-  });
-};
+  })
+}
 
 /**
  * 删除用户
@@ -66,12 +66,12 @@ export const searchUsers = async (username: any) => {
  */
 export const deleteUser = async (id: string) => {
   return myAxios.request({
-    url: "/api/user/delete",
-    method: "POST",
-    data: id,
+    url: '/api/user/delete',
+    method: 'POST',
+    data: { id },
     // 关键点：要传递 JSON 格式的值
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
-  });
-};
+  })
+}
