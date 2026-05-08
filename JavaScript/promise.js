@@ -77,65 +77,7 @@
 //     console.log(Error);
 //   });
 
-// // 刚才那个回调地狱的例子,改写为Promise
-// function login(username, password) {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       if (username === "admin" && password === "123456") {
-//         resolve({ username: "admin", role: "管理员" });
-//         // console.log("登录成功");
-//       } else {
-//         reject("登录失败");
-//       }
-//     }, 500);
-//   });
-// }
-
-// function getPermission(role) {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       if (role === "管理员") {
-//         resolve("用户管理");
-//         // console.log("权限满足");
-//       } else {
-//         reject("权限不足");
-//       }
-//     }, 500);
-//   });
-// }
-
-// function getData(page) {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       // console.log(page);
-//       if (page === "用户管理") {
-//         resolve("数据");
-//         // console.log("获取成功");
-//       } else {
-//         reject("暂无数据");
-//       }
-//     }, 500);
-//   });
-// }
-
-// // login("admin", "123456")
-// //   .then((User) => getPermission(User.role))
-// //   .then((Page) => getData(Page));
-
-// // Promise.all - 等待所有 Promise 完成
-// Promise.all([
-//   login("admin", "123456"),
-//   getPermission("管理员"),
-//   getData("用户管理"),
-// ]).then(([User, Role, Page]) => {
-//   console.log(User + Role + Page);
-// });
-
-// // Promise.race - 任意一个先完成
-// // Promise.allSettled - 等待所有完成（无论成功或失败）
-
-// async/await 是 Promise 的语法糖
-// 重写上面的案例
+// 刚才那个回调地狱的例子,改写为Promise
 function login(username, password) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -175,3 +117,30 @@ function getData(page) {
     }, 500);
   });
 }
+
+// // login("admin", "123456")
+// //   .then((User) => getPermission(User.role))
+// //   .then((Page) => getData(Page));
+
+// // Promise.all - 等待所有 Promise 完成
+// Promise.all([
+//   login("admin", "123456"),
+//   getPermission("管理员"),
+//   getData("用户管理"),
+// ]).then(([User, Role, Page]) => {
+//   console.log(User + Role + Page);
+// });
+
+// // Promise.race - 任意一个先完成
+// // Promise.allSettled - 等待所有完成（无论成功或失败）
+
+// async/await 是 Promise 的语法糖
+// 重写上面的案例
+async function main() {
+  const User = await login("admin", "123456");
+  const Role = await getPermission("管理员");
+  const Page = await getData("用户管理");
+  console.log(User, Role, Page);
+}
+
+main();
